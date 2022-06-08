@@ -1,0 +1,41 @@
+<!-- 2022-6-6 21:33:55 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- html
+    1. 请说说'<script>、<script async>、<script defer>'区别?
+    答：script标签用于定义客户端脚本，比如js，可以包含脚本语句，也可以通过src链接外部文件. async： 规定异步执行脚本（仅适用于外部脚本）。defer：规定当页已完成解析后，执行脚本（仅用于外部脚本） -->
+    <!-- 总结: async 异步， defer 延迟执行，等页面解析完成后，再执行。 -->
+
+    <!-- css
+    2. 页面中应该使用奇数还是偶数字体？为什么？
+    答：偶数，因为浏览器设定的字体是12,14，16.如果是偶数更容易计算为整数，奇数经常会难以除尽，需要保留小数或者舍掉小数，如果没有写防御代码，会导致界面不稳定。 -->
+    
+    <!-- 软技能
+    4. 说说你工作中遇到过比较难的技术问题是什么？是如何解决的
+    答：例如uniapp 终端机语音识别。 当时用的百度的语音识别技术，识别效率低，识别慢， 我采用了用户回答拼音首字母以及字符池的方式优化了识别率低的问题。平时有其他技术问题，就会去百度，去bing，去掘金等技术论坛查找相关关键词，来寻找解决方案。 -->
+    <script>
+        // js
+        // 3. 写一个判断设备来源的方法?
+        function isagent() {
+            // navigator是js一个独立对象，提供用户所使用的浏览器以及操作系统的信息
+            var ua = navigator.userAgent
+            console.log(ua)
+            // 判断手机或者pc
+            if (/Android|iPhone|iPad|iPod|BlackBerry|webOS|Windows Phone|SymbianOS|IEMobile|Opera Mini/i.test(ua)) {
+                console.log('我是手机')
+            } else {
+                console.log('我是PC')
+            }
+        }
+        isagent()
+    </script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    html
+    1. 解释下你对GBK和UTF-8的理解？并说说页面上产生乱码的可能原因？
+    答： GBK专门用来解决中文编码，双字节，UTF-8解决国际制度的一种多字节编码，
+        如果是外国人访问你的GBK网页，则会显示乱码，需要下载中文语言包支持，但UTF-8则不会出现这个问题，可以直接访问。GBK包含全部中文字符，UTF-8包含全世界所有国家用到的字符。
+    css
+    2. 说说你对z-index的理解
+    答：css属性，设置元素的堆叠顺序，值越大，层级越高。默认值auto，单独设置没用，必须搭配positon一起使用。
+
+    js
+    3. 说说bind,call,apply的区别？并手写一个实现bind的方法？
+    答：call，apply，bind都是用来改变this指向的。
+        bind会返回一个新函数，新函数可以调用他所绑定的对象的属性。
+        区别是第二个参数不同，call的参数是直接放进去的，第二个第三个第n个全部用逗号分割，直接放到后面obj.Func.call(db, 'a', ..., 'str')
+        apply的所有参数必须放在一个数组里传进去，例如 obj.Func.apply(db, ['a', ..., 'str'])
+        bind除了返回是函数之外，参数和call一样。
+        此外，3者的参数都可以是任意类型，包括函数和object等等。
+
+    4. 谈谈你对Git的branch及工作流的理解是什么？
+    答： 一般大型项目都会分成不同的人员开发，Git允许每个开发人员创建一个分支，然后进行合并，最终实现存储。
+    答：首先clone代码，然后remote链接代码库，之后修改代码，commit注释，在pull一下，之后再push
+    <script>
+        // 手写一个bind
+        Function.prototype.bind = function(o) {
+            var self = this, boundArgs = arguments  // bind方法返回的是一个函数
+            return function() {
+                // 创建一个实参列表，将传入bind()的第二个以及后续的实参都传入这个函数
+                var args = [], i
+                for (i = 1; i < boundArgs.length; i++) {
+                    args.push(boundArgs[i])
+                    return self.apply(o, args)
+                }
+            }
+        }
+    </script>
+</body>
+</html>
