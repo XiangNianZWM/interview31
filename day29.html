@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .red {
+      color: red;
+    }
+
+    .blue {
+      color: blue
+    }
+  </style>
+</head>
+<body>
+  html
+  1. 你了解什么是无障碍web(WAI)吗？在开发过程中要怎么做呢？
+  答：无障碍是指能让视觉障碍的人也能根据屏幕阅读器的提示阅读网页， 尽可能的语义化代码，如section和article等标签，img加alt，button加入title，表单尽量用label for可以和控件的id进行关联。
+
+  css 
+  2. 请描述css的权重计算规则?
+  答：!important(infinity) > 内联(style='...' 1000) > id(#id 100) > class(.a 10) > 属性([type = 'text'] 10) > 伪类(:hover 10) > 标签p (1) > 伪元素::after(1) > 相邻、子代、通配符 (* > + 0) 
+
+  软技能
+  4. 在工作中能让你有成就感的是什么？并介绍下你最得意的杰作吧
+  答：我最有成就感的就是解决一个又一个的bug，近期写的最好的就是一个智能测视力项目，采用uniapp框架，利用百度语音识别，人脸识别，离线语音播报功能做的一个自助视力检测项目。用户可以站在机器前通过人脸识别登录，然后通过语音播报引导用户，让用户回答相关项目，之后语音自动识别用户回答正确与否，最终来检测用户的视力情况
+  <div class="red blue">123</div>
+  <div class="blue red">123</div>
+
+  
+  <script>
+    // js
+    // 3. 写一个获取数组的最大值、最小值的方法？
+
+    function getMax(arr) {
+      if (!(arr instanceof Array)) {
+        return false
+      }
+      return Math.max(...arr)
+    }
+    function getMin(arr) {
+      if (!(arr instanceof Array)) {
+        return false
+      }
+      return Math.min(...arr)
+    }
+    console.log(getMax([1,2,3,4,5]))
+    console.log(getMin([1,2,3,4,5]))
+  </script>
+</body>
+</html>
