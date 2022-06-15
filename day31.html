@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      text-shadow: 1px 1px 1px 1px rgba(0,0,0,0.005);
+      text-rendering: optimizeLegibility;
+    }
+  </style>
+</head>
+<body>
+  html
+  1. DOM和BOM有什么区别？
+  答：BOM是浏览器对象模型，提供了独立于内容而与浏览器窗口进行交互的对象。描述了与浏览器进行交互的方法和接口，可以对浏览器窗口进行访问和操作，例如可以弹出新窗口，改变状态栏的文本。BOM主要操作浏览器的行为，例如：navigator,location,history,storage
+  DOM是文档对象模型，针对HTML的一系列API。描述处理网页内容的方法和接口，DOM把整个页面规划成由节点层级构成的文档。
+
+  css
+  2. 让网页的字体变得清晰，变细用css怎么做？
+  答：font-family和font-weight.
+  font-weight 控制粗细需要看对应字体有没有对应的变种字体，所以和font-family相关。
+  -webkit-font-smoothing 抗锯齿，只针对-webkit内核的浏览器。
+
+  软技能
+  4. 对于有压力时，你是怎么抗压的？
+  答：我会就这个问题钻研一会儿，如果遇到瓶颈，我会尝试走动一下，喝杯水，或者尝试与同事沟通一下思路。最终解决它。之后会记录解决过程，并提高自己的能力。
+  
+  <script>
+  // js
+  // 3. 写一个方法把0和1互转，(0置1,1置0)
+  function zhih(str) {
+    var s = (str+'').split('')
+    var h=[]
+    s.forEach(item => {
+      if (item == 1) {
+        h.push(0)
+      } else if (item == 0) {
+        h.push(1)
+      } else {
+        h.push(item)
+      }
+    })
+    return h.join('')
+  }
+
+  function s(num) {
+    return num === 1 ? 0 : 1
+  }
+  console.log(s(0))
+  </script>
+</body>
+</html>

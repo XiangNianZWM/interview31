@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <!-- html
+  1. 网页上的验证码是为了解决什么问题？说说你了解的验证码种类有哪些？
+  答：为了防止机器人或者工具重复发送请求保护服务器等行为。，常见的有：文字，图片，数字，滑动，短信，语音验证码
+
+  css
+  2. 描述下你所了解的图片格式以及使用场景？
+  答：jpg、png、gif，
+  jpg适合当内容图片，png适合当图标或者背景图片，因为是透明的，gif适合做一些动画
+
+  
+  js
+  3. 写一个方法判断字符串是否为回文字符串
+  答： -->
+
+  <!-- 软技能
+  4. 解释下CRLF是什么？
+  答：CRLF是carriagereturnlinefeed的缩写，中文意思是回车换行
+  CR是\r回车, LF是\n换行 -->
+  <script>
+    // 所谓回文字符串指的是从左往右或从右往左读法是一样的
+
+    // 第一种，
+    // 将str分割成数组，然后将他们reverse在join
+    function sstr(str) {
+      let s = str.replace(/[^a-zA-Z0-9]/g, '').toLowerCase()
+      let r = s.split('').reverse().join('').toLowerCase()
+      if (s === r) {
+        console.log('我是回文字符串')
+      } else {
+        console.log('我不是回文字符串')
+      }
+    }
+    sstr('abccbaa')
+    sstr('A man, a plan, a canal: Panama')
+
+    // 第二种双指针
+    function isp(str) {
+      let lp = 0, rp = str.length - 1
+      while(lp <= rp) {
+        if (str[lp++] != str[rp--]) {
+          return false
+        }
+        return true
+      }
+    }
+    console.log(isp('abccbassa'))
+    console.log(isp('A man, a plan, a canal: Panama'))
+  </script>
+</body>
+</html>
